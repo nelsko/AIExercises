@@ -1,1 +1,27 @@
+<div fxLayout="row" fxLayoutAlign="center center">
+  <div id="header" fxLayout="row" fxLayoutAlign="start center">
+    <div class="nav-element" fxLayout="row" fxLayoutAlign="center center">
+      <mat-icon>trending_up</mat-icon>
+      <label>Stats</label>
+    </div>
+    <div class="nav-element" fxLayout="row" fxLayoutAlign="center center">
+      <mat-icon>insert_drive_file</mat-icon>
+      <label>Work sheets</label>
+    </div>
+    <div class="nav-element" fxLayout="row" fxLayoutAlign="center center">
+      <mat-icon>functions</mat-icon>
+      <label>Exercises</label>
+    </div>
+    <span fxFlex="50"></span>
+    <div fxFlex fxLayout="row" fxLayoutAlign="end center" style="margin-right:8px;">
+      <div class="nav-element" fxLayout="row" fxLayoutAlign="center center">
+        <label style="margin-right:8px">{{User.Username}}</label>
+        <mat-icon>person</mat-icon>
+      </div>
+      <div class="nav-element" fxLayout="row" fxLayoutAlign="center center">
+        <mat-icon>language</mat-icon>
+      </div>
+    </div>
+  </div>
+</div>
 <router-outlet></router-outlet>

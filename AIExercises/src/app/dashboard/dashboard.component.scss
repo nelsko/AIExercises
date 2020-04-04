@@ -1,2 +1,25 @@
-﻿body {
+.widget {
+  width: 200px;
+  height: 130px;
+
+  span {
+    text-align: center;
+  }
+}
+
+.chart {
+  margin-top: 10px;
+
+  .widget-row {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .chart-widget {
+    width: 350px;
+    height: 250px;
+    mat-card-header{
+        text-align:center;
+    }
+  }
 }

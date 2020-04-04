@@ -1,10 +1,68 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <title></title>
-</head>
-<body>
-  <p>test</p>
-</body>
-</html>
+<div class="content">
+  <div fxLayout="row" fxLayoutAlign="space-evenly center">
+    <mat-card class="widget" fxLayout="column" fxLayoutAlign="center center">
+      <mat-card-header>
+
+      </mat-card-header>
+      <mat-card-content class="cardContent" fxLayout="column">
+        <span>{{Stats.StudentsRegisteredCount}}</span>
+        <span>Students registered</span>
+      </mat-card-content>
+    </mat-card>
+    <mat-card class="widget" fxLayout="column" fxLayoutAlign="center center">
+      <mat-card-header>
+
+      </mat-card-header>
+      <mat-card-content class="cardContent" fxLayout="column">
+        <span>{{Stats.HomeworkNeedsCorrectionCount}}</span>
+        <span>Homework needs correction</span>
+      </mat-card-content>
+    </mat-card>
+    <mat-card class="widget" fxLayout="column" fxLayoutAlign="center center">
+      <mat-card-header>
+
+      </mat-card-header>
+      <mat-card-content class="cardContent" fxLayout="column">
+        <span>{{Stats.TestsNeedCorrectionCount}}</span>
+        <span>Tests needs correction</span>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  <div fxLayout="column" fxLayoutAlign="start center" class="chart">
+    <div fxLayout="row" fxLayoutAlign="space-around start" class="widget-row">
+      <mat-card class="chart-widget" fxLayout="column" fxLayoutAlign="start center">
+        <mat-card-header>
+          Tests and Homeworks over time
+        </mat-card-header>
+        <mat-card-content class="cardContent" fxLayout="column">
+          <div *ngIf="testsHomeworksOverTime">
+            <canvas id="canvas">{{ testsHomeworksOverTime }}</canvas>
+          </div>
+        </mat-card-content>
+      </mat-card>
+      <mat-card class="chart-widget" fxLayout="column" fxLayoutAlign="start center">
+        <mat-card-header>
+          Grade distribution
+        </mat-card-header>
+        <mat-card-content class="cardContent" fxLayout="column" >
+        </mat-card-content>
+      </mat-card>
+    </div>
+    <div fxLayout="row" fxLayoutAlign="space-around start" class="widget-row" style="margin-top:10px;">
+      <mat-card class="chart-widget" fxLayout="column" fxLayoutAlign="start center">
+        <mat-card-header>
+          Average time spent per test
+        </mat-card-header>
+        <mat-card-content class="cardContent" fxLayout="column">
+        </mat-card-content>
+      </mat-card>
+      <mat-card class="chart-widget" fxLayout="column" fxLayoutAlign="start center">
+        <mat-card-header>
+          Satisfaction of studends regarding tests / homeworks
+        </mat-card-header>
+        <mat-card-content class="cardContent" fxLayout="column">
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</div>
