@@ -1,14 +1,14 @@
 <div fxLayout="row" fxLayoutAlign="center center">
   <div id="header" fxLayout="row" fxLayoutAlign="start center">
-    <div class="nav-element" fxLayout="row" fxLayoutAlign="center center">
+    <div class="nav-element" fxLayout="row" fxLayoutAlign="center center" [routerLink]="['/stats']">
       <mat-icon>trending_up</mat-icon>
       <label>Stats</label>
     </div>
-    <div class="nav-element" fxLayout="row" fxLayoutAlign="center center">
+    <div class="nav-element" fxLayout="row" fxLayoutAlign="center center" [routerLink]="['/worksheets']">
       <mat-icon>insert_drive_file</mat-icon>
       <label>Work sheets</label>
     </div>
-    <div class="nav-element" fxLayout="row" fxLayoutAlign="center center">
+    <div class="nav-element" fxLayout="row" fxLayoutAlign="center center" [routerLink]="['/problemsheets']">
       <mat-icon>functions</mat-icon>
       <label>Exercises</label>
     </div>
