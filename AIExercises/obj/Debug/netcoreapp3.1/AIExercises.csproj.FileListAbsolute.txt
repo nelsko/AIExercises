@@ -1,0 +1,3 @@
+C:\Projekte\Projekte Zuhause\Hackathon\AIExercises\AIExercises\obj\Debug\netcoreapp3.1\AIExercises.csprojAssemblyReference.cache
+C:\Projekte\Projekte Zuhause\Hackathon\AIExercises\AIExercises\obj\Debug\netcoreapp3.1\staticwebassets\AIExercises.StaticWebAssets.Manifest.cache
+C:\Projekte\Projekte Zuhause\Hackathon\AIExercises\AIExercises\obj\Debug\netcoreapp3.1\staticwebassets\AIExercises.StaticWebAssets.xml

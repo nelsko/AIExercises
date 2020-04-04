@@ -5,7 +5,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="src\app\dashboard\dashboard.component.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="app\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <TypeScriptCompile Include="src\app\dashboard\dashboard.component.ts" />
   </ItemGroup>
 
 </Project>
