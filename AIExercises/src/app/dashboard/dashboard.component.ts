@@ -112,16 +112,14 @@ export class DashboardComponent implements OnInit, AfterViewInit {
       this.SatisfactionOfStudents = new Chart('SatisfactionOfStudents', {
         type: 'doughnut',
         data: {
-          labels: ["Mr. Smith", "Mrs. Johansson", "Mr. Andersson", "Mrs. Karlsson"],
+          labels: ["Corrected", "Pending"],
           datasets: [
             {
               backgroundColor: [
-                "#FF6384",
-                "#36A2EB",
-                "#36ebcd",
-                "#d9eb36"
+                "#00FF00",
+                "#ff1a00",
               ],
-              data: [8, 9, 7, 10]
+              data: [8, 10]
             }
           ]
         },

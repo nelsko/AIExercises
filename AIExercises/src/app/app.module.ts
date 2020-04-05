@@ -18,7 +18,6 @@ import { ExerciseSheetComponent } from './exercise-sheets-component/exercise-she
 import { ExerciseSheetEditCreateComponent } from './exercise-sheets-edit-create-component/exercise-sheets-edit-create.component';
 import { NgxLoadingModule } from 'ngx-loading';
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -46,7 +45,8 @@ import { NgxLoadingModule } from 'ngx-loading';
     FormsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    MatSelectModule
+    MatSelectModule,
+    NgxLoadingModule.forRoot({})
   ],
   entryComponents: [
     WorkSheetEditCreateComponent,

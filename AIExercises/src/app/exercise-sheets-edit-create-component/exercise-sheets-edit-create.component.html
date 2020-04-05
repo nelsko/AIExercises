@@ -30,7 +30,7 @@
 
         <mat-form-field>
           <mat-select placeholder="Difficulty" [(ngModel)]="local_data.difficulty">
-            <mat-option *ngFor="let difficulty of difficulties" [value]="local_data.difficulty">
+            <mat-option *ngFor="let difficulty of difficulties" [value]="difficulty.value">
               {{ difficulty.viewValue }}
             </mat-option>
           </mat-select>
