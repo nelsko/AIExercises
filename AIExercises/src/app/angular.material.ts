@@ -16,7 +16,7 @@ import { NgModule } from '@angular/core';
     MatStepperModule,
     MatFormFieldModule,
     MatInputModule,
-    MatRippleModule,
+    MatRippleModule
   ],
 
   exports: [
