@@ -1,14 +1,15 @@
-#header{
-    width:100%;
-    height:50px;
-    box-shadow: 1px 1px 1px 1px #333;
-    .nav-element{
-        height:100%;
-        margin-left:8px;
-        cursor: pointer;
-    }
-    label{
-        padding-left:5px;
-    }
-}
+#header {
+  width: 100%;
+  height: 50px;
+  box-shadow: 1px 1px 1px 1px #333;
+  background-color: rgb(225, 31, 44);
+  .nav-element {
+    height: 100%;
+    margin-left: 8px;
+    cursor: pointer;
+  }
 
+  label {
+    padding-left: 5px;
+  }
+}

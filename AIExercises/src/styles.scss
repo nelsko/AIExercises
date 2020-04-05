@@ -3,6 +3,10 @@
 html, body{
     height:100%;
     margin:0;
+    color: white;
+    mat-icon{
+        color: #333;
+    }
 }
 .content{
     margin-top:10px;

@@ -2,13 +2,14 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <TypeScriptToolsVersion>2.8</TypeScriptToolsVersion>
+    <TypeScriptToolsVersion>3.7</TypeScriptToolsVersion>
   </PropertyGroup>
 
   <ItemGroup>
     <None Remove="src\app\dashboard\dashboard.component.ts" />
     <None Remove="src\app\work-sheets-component\work-sheets.component.ts" />
     <None Remove="src\app\work-sheets-edit-create-component\work-sheets-edit-create.component.ts" />
+    <None Remove="src\app\_models\StatusModel.ts" />
   </ItemGroup>
 
   <ItemGroup>
@@ -23,6 +24,7 @@
     <TypeScriptCompile Include="src\app\work-sheets-edit-create-component\work-sheets-edit-create.component.ts">
       <SubType>Code</SubType>
     </TypeScriptCompile>
+    <TypeScriptCompile Include="src\app\_models\StatusModel.ts" />
   </ItemGroup>
 
 </Project>

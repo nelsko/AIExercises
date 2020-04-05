@@ -1,11 +1,11 @@
-<div class="content">
+<div class="content" [hidden]="loading">
   <div fxLayout="row" fxLayoutAlign="space-evenly center">
     <mat-card class="widget" fxLayout="column" fxLayoutAlign="center center">
       <mat-card-header>
 
       </mat-card-header>
       <mat-card-content class="cardContent" fxLayout="column">
-        <span>{{Stats.StudentsRegisteredCount}}</span>
+        <span class="count">{{Stats.StudentsRegisteredCount}}</span>
         <span>Students registered</span>
       </mat-card-content>
     </mat-card>
@@ -14,7 +14,7 @@
 
       </mat-card-header>
       <mat-card-content class="cardContent" fxLayout="column">
-        <span>{{Stats.HomeworkNeedsCorrectionCount}}</span>
+        <span class="count">{{Stats.HomeworkNeedsCorrectionCount}}</span>
         <span>Homework needs correction</span>
       </mat-card-content>
     </mat-card>
@@ -23,7 +23,7 @@
 
       </mat-card-header>
       <mat-card-content class="cardContent" fxLayout="column">
-        <span>{{Stats.TestsNeedCorrectionCount}}</span>
+        <span class="count">{{Stats.TestsNeedCorrectionCount}}</span>
         <span>Tests needs correction</span>
       </mat-card-content>
     </mat-card>
@@ -35,16 +35,17 @@
           Tests and Homeworks over time
         </mat-card-header>
         <mat-card-content class="cardContent" fxLayout="column">
-          <div *ngIf="testsHomeworksOverTime">
-            <canvas id="canvas">{{ testsHomeworksOverTime }}</canvas>
-          </div>
+            <canvas id="TestsHomeworksOverTime">{{ TestsHomeworksOverTime }}</canvas>
         </mat-card-content>
       </mat-card>
       <mat-card class="chart-widget" fxLayout="column" fxLayoutAlign="start center">
         <mat-card-header>
           Grade distribution
         </mat-card-header>
-        <mat-card-content class="cardContent" fxLayout="column" >
+        <mat-card-content class="cardContent" fxLayout="column">
+          <div>
+            <canvas id="GradeDistribution">{{ GradeDistribution }}</canvas>
+          </div>
         </mat-card-content>
       </mat-card>
     </div>
@@ -54,6 +55,9 @@
           Average time spent per test
         </mat-card-header>
         <mat-card-content class="cardContent" fxLayout="column">
+          <div>
+            <canvas id="AverageTimeSpentPerTest">{{ AverageTimeSpentPerTest }}</canvas>
+          </div>
         </mat-card-content>
       </mat-card>
       <mat-card class="chart-widget" fxLayout="column" fxLayoutAlign="start center">
@@ -61,8 +65,12 @@
           Satisfaction of studends regarding tests / homeworks
         </mat-card-header>
         <mat-card-content class="cardContent" fxLayout="column">
+          <div>
+            <canvas id="SatisfactionOfStudents">{{ SatisfactionOfStudents }}</canvas>
+          </div>
         </mat-card-content>
       </mat-card>
     </div>
   </div>
 </div>
+<ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '3px' }" [template]="customLoadingTemplate"></ngx-loading>
