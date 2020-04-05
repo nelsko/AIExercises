@@ -1,0 +1,74 @@
+<div class="content" [ngClass]="{'smallerHeight' : action == 'Delete'}" >
+  <div id="contentColumn" fxLayout="column" fxLayoutAlign="space-between none" >
+    <div div fxLayout="row" fxLayoutAlign="space-between stretch" >
+      <h1 mat-dialog-title> {{action}} Work Sheet</h1>
+      <button mat-icon-button mat-button (click)="closeDialog()" color="black">
+        <mat-icon>close</mat-icon>
+      </button>
+    </div>
+
+    <div  fxLayout="column" fxLayoutAlign="space-between stretch"  mat-dialog-content>
+
+      <div fxLayout="row" fxLayoutAlign="space-between stretch" *ngIf="action != 'Delete'">
+        <mat-checkbox class="example-margin" [(ngModel)]="local_data.test">Test</mat-checkbox>
+        <mat-checkbox class="example-margin" [(ngModel)]="local_data.homework">Homework</mat-checkbox>
+      </div>
+
+
+        <mat-form-field class="fullWidth" *ngIf="action != 'Delete'; else elseTemplate">
+          <input placeholder="{{action}} Name" matInput [(ngModel)]="local_data.name">
+        </mat-form-field>
+        <ng-template #elseTemplate>
+          <div> Sure to delete {{local_data.name}}?</div>
+        </ng-template>
+
+        <mat-form-field class="fullWidth" *ngIf="action != 'Delete'">
+          <input type="number" placeholder="{{action}} Allowed time (minutes)" matInput [(ngModel)]="local_data.allowedTime">
+        </mat-form-field>
+
+
+      <div fxLayout="row" fxLayoutAlign="space-between stretch" *ngIf="action != 'Delete'">
+        <mat-form-field>
+          <mat-select placeholder="Easy Problems" [formControl]="easyProblemsForm" multiple [(ngModel)]="local_data.easyProblems">
+            <mat-option *ngFor="let easyProblem of allEasyProblems" [value]="easyProblem">{{easyProblem}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field>
+          <input type="number" placeholder="{{action}} Easy problems per work sheet" matInput [(ngModel)]="local_data.easyProblemsPerWorkSheet">
+        </mat-form-field>
+      </div>
+
+      <div fxLayout="row" fxLayoutAlign="space-between stretch" *ngIf="action != 'Delete'">
+        <mat-form-field>
+          <mat-select placeholder="Medium Problems" [formControl]="mediumProblemsForm" multiple [(ngModel)]="local_data.mediumProblems">
+            <mat-option *ngFor="let mediumProblem of allMediumProblems" [value]="mediumProblem">{{mediumProblem}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field>
+          <input type="number" placeholder="{{action}} Medium problems per work sheet" matInput [(ngModel)]="local_data.mediumProblemsPerWorkSheet">
+        </mat-form-field>
+      </div>
+
+      <div fxLayout="row" fxLayoutAlign="space-between stretch" *ngIf="action != 'Delete'">
+        <mat-form-field>
+          <mat-select placeholder="Hard Problems" [formControl]="hardProblemsForm" multiple [(ngModel)]="local_data.hardProblems">
+            <mat-option *ngFor="let hardProblem of allHardProblems" [value]="hardProblem">{{hardProblem}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field>
+          <input type="number" placeholder="{{action}} Hard problems per work sheet" matInput [(ngModel)]="local_data.hardProblemsPerWorkSheet">
+        </mat-form-field>
+      </div>
+
+    </div>
+
+    <div id="actionRow" mat-dialog-actions>
+      <button mat-button (click)="doAction()">{{action}}</button>
+      <button mat-button (click)="closeDialog()" mat-flat-button color="warn">Cancel</button>
+    </div>
+  </div>
+  </div>
+

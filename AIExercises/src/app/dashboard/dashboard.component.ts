@@ -6,37 +6,29 @@ import { Chart } from 'chart.js';
 })
 export class DashboardComponent implements OnInit {
   ngOnInit(){
-
+    //new Chart(document.getElementById("canvas"), {
+    //  type: 'bar',
+    //  data: {
+    //    labels: ["1900", "1950", "1999", "2050"],
+    //    datasets: [
+    //      {
+    //        label: "Africa",
+    //        backgroundColor: "#3e95cd",
+    //        data: [133, 221, 783, 2478]
+    //      }, {
+    //        label: "Europe",
+    //        backgroundColor: "#8e5ea2",
+    //        data: [408, 547, 675, 734]
+    //      }
+    //    ]
+    //  },
+    //  options: {
+    //    title: {
+    //      display: true,
+    //      text: 'Population growth (millions)'
+    //    }
+    //  }
+    //});
 }
-  /*testsHomeworksOverTime = new Chart('canvas', {
-    type: 'line',
-    data: {
-      labels: "test1",
-      datasets: [
-        {
-          data: [1,2,3],
-          borderColor: "#3cba9f",
-          fill: false
-        },
-        {
-          data: [1, 2, 3],
-          borderColor: "#ffcc00",
-          fill: false
-        },
-      ]
-    },
-    options: {
-      legend: {
-        display: false
-      },
-      scales: {
-        xAxes: [{
-          display: true
-        }],
-        yAxes: [{
-          display: true
-        }],
-      }
-    }
-  });*/
+ 
 }

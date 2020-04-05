@@ -1,0 +1,31 @@
+.content{
+  height: 600px;
+  
+}
+
+table{
+  width: 100%
+}
+
+tr.mat-row {
+  border: 1px solid #e7e7e7;
+  height: 50px !important;
+}
+
+#addButton {
+  float: right;
+  margin-bottom: 15px;
+}
+
+#actionsRowCol{
+  width: 100px;
+}
+
+#actionsRowRows {
+  padding-right: 0px;
+  padding-left: 25px;
+}
+
+.mat-column-id{
+  width: 50px;
+}
