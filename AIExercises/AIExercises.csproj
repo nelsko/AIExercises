@@ -7,6 +7,8 @@
 
   <ItemGroup>
     <None Remove="src\app\dashboard\dashboard.component.ts" />
+    <None Remove="src\app\exercise-sheets-component\exercise-sheets.component.ts" />
+    <None Remove="src\app\exercise-sheets-edit-create-component\exercise-sheets-edit-create.component.ts" />
     <None Remove="src\app\work-sheets-component\work-sheets.component.ts" />
     <None Remove="src\app\work-sheets-edit-create-component\work-sheets-edit-create.component.ts" />
     <None Remove="src\app\_models\StatusModel.ts" />
@@ -18,7 +20,13 @@
 
   <ItemGroup>
     <TypeScriptCompile Include="src\app\dashboard\dashboard.component.ts" />
+    <TypeScriptCompile Include="src\app\exercise-sheets-component\exercise-sheets.component.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
     <TypeScriptCompile Include="src\app\work-sheets-component\work-sheets.component.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="src\app\exercise-sheets-edit-create-component\exercise-sheets-edit-create.component.ts">
       <SubType>Code</SubType>
     </TypeScriptCompile>
     <TypeScriptCompile Include="src\app\work-sheets-edit-create-component\work-sheets-edit-create.component.ts">

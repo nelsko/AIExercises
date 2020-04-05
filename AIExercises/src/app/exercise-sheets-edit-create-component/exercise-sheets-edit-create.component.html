@@ -1,0 +1,62 @@
+<div class="content" [ngClass]="{'smallerHeight' : action == 'Delete'}" >
+  <div id="contentColumn" fxLayout="column" fxLayoutAlign="space-between none" >
+    <div div fxLayout="row" fxLayoutAlign="space-between stretch" >
+      <h1 mat-dialog-title> {{action}} Exercise Sheet</h1>
+      <button mat-icon-button mat-button (click)="closeDialog()" color="black">
+        <mat-icon>close</mat-icon>
+      </button>
+    </div>
+
+    <div fxLayout="column" fxLayoutAlign="space-between stretch" mat-dialog-content>
+
+      <mat-form-field class="fullWidth" *ngIf="action != 'Delete'; else elseTemplate">
+        <input placeholder="{{action}} Name" matInput [(ngModel)]="local_data.name">
+      </mat-form-field>
+      <ng-template #elseTemplate>
+        <div> Sure to delete {{local_data.name}}?</div>
+      </ng-template>
+
+      <mat-form-field class="fullWidth" *ngIf="action != 'Delete'">
+        <input type="number" placeholder="{{action}} Score" matInput [(ngModel)]="local_data.score">
+      </mat-form-field>
+
+
+      <div fxLayout="row" fxLayoutAlign="space-between stretch" *ngIf="action != 'Delete'">
+        <mat-form-field>
+          <mat-select placeholder="Solution Type" [formControl]="solutionsForm" multiple [(ngModel)]="local_data.solutionType">
+            <mat-option *ngFor="let solutionType of allSolutionTypes" [value]="solutionType">{{solutionType}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-select placeholder="Difficulty" [(ngModel)]="local_data.difficulty">
+            <mat-option *ngFor="let difficulty of difficulties" [value]="local_data.difficulty">
+              {{ difficulty.viewValue }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      
+      <div *ngIf="showTask" fxLayout="column" fxLayoutAlign="space-between center">
+        <div>Exercise task</div>
+        <div class="exercise"></div>
+      </div>
+
+      <div *ngIf="action != 'Delete'" fxLayout="row" fxLayoutAlign="end center" mat-dialog-actions>
+        <button mat-button mat-flat-button color="warn">Upload new task</button>
+      </div>
+
+      <mat-form-field class="fullWidth" *ngIf="action != 'Delete'">
+        <input type="number" placeholder="{{action}} Solution" matInput [(ngModel)]="solution">
+      </mat-form-field>
+
+
+    </div>
+
+    <div id="actionRow" mat-dialog-actions>
+      <button mat-button (click)="doAction()">{{action}}</button>
+      <button mat-button (click)="closeDialog()" mat-flat-button color="warn">Cancel</button>
+    </div>
+  </div>
+  </div>
+

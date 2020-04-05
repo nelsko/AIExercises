@@ -14,14 +14,19 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { WorkSheetEditCreateComponent } from './work-sheets-edit-create-component/work-sheets-edit-create.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { ExerciseSheetComponent } from './exercise-sheets-component/exercise-sheets.component';
+import { ExerciseSheetEditCreateComponent } from './exercise-sheets-edit-create-component/exercise-sheets-edit-create.component';
 import { NgxLoadingModule } from 'ngx-loading';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
     WorkSheetComponent,
-    WorkSheetEditCreateComponent
+    WorkSheetEditCreateComponent,
+    ExerciseSheetComponent,
+    ExerciseSheetEditCreateComponent
   ],
   imports: [
     BrowserModule,
@@ -41,10 +46,11 @@ import { NgxLoadingModule } from 'ngx-loading';
     FormsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    NgxLoadingModule.forRoot({})
+    MatSelectModule
   ],
   entryComponents: [
-    WorkSheetEditCreateComponent
+    WorkSheetEditCreateComponent,
+    ExerciseSheetEditCreateComponent
   ],
   exports: [
     MatCardModule,
