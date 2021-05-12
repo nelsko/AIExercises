@@ -30,7 +30,7 @@
     "@ngx-translate/http-loader": "4.0.0",
     "angular-d3-word-cloud": "0.5.3",
     "angular-gridster2": "7.1.0",
-    "chart.js": "^2.9.3",
+    "chart.js": "^2.9.4",
     "core-js": "2.6.4",
     "d3": "5.11.0",
     "d3-cloud": "1.2.5",
